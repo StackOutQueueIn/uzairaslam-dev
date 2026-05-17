@@ -1,6 +1,11 @@
 import type { SVGProps } from 'react';
 
-function IconBase({ children, ...props }: SVGProps<SVGSVGElement> & { children: React.ReactNode }) {
+type IconProps = SVGProps<SVGSVGElement> & {
+  children: React.ReactNode;
+  size?: number;
+};
+
+function IconBase({ children, size = 24, ...props }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -10,6 +15,8 @@ function IconBase({ children, ...props }: SVGProps<SVGSVGElement> & { children: 
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
+      width={size}
+      height={size}
       {...props}
     >
       {children}
