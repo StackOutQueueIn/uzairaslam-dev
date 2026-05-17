@@ -1,6 +1,6 @@
 'use client';
 
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, MailIcon } from './icons';
 
 export default function Contact() {
   return (
@@ -95,7 +95,7 @@ export default function Contact() {
                 href="mailto:uzair.aslam@example.com"
                 className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
               >
-                <Mail size={20} className="text-accent" />
+                <MailIcon className="h-5 w-5 text-accent" />
                 <span className="font-mono text-sm">uzair.aslam@example.com</span>
               </a>
               <a
@@ -104,7 +104,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
               >
-                <Linkedin size={20} className="text-accent" />
+                <LinkedinIcon className="h-5 w-5 text-accent" />
                 <span className="font-mono text-sm">LinkedIn</span>
               </a>
               <a
@@ -113,7 +113,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
               >
-                <Github size={20} className="text-accent" />
+                <GithubIcon className="h-5 w-5 text-accent" />
                 <span className="font-mono text-sm">GitHub</span>
               </a>
             </div>

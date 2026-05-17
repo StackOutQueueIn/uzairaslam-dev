@@ -16,15 +16,15 @@ export default function About() {
         {/* Content */}
         <div className="flex-1 space-y-4">
           <p className="text-muted-foreground leading-relaxed">
-            I&apos;m a full-stack software engineer with expertise in building accessible, pixel-perfect user interfaces and powerful backend systems. My interest in web development started back in 2019 when I decided to learn programming—turns out, hacking together a custom reblog button taught me a lot about building things on the web.
+            I&apos;m a full-stack software engineer with expertise in building accessible, pixel-perfect user interfaces and powerful backend systems. My interest in web development started back in 2021 when I decided to learn programming—turns out, hacking together a custom reblog button taught me a lot about building things on the web.
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
-            Fast-forward to today, and I&apos;ve had the privilege of working at companies like Cyberoide Tech where I&apos;ve worn many hats and had a hand in shipping products for clients in various industries including banking, healthcare, e-commerce, and travel. My main focus these days is building accessible digital experiences at scale.
+            Fast-forward to today, and I&apos;ve had the privilege of working at companies like Cyberoide Tech where I&apos;ve worn many hats and had a hand in shipping products for clients in various industries including Saas Platforms, e-commerce, gaming, Streaming platforms. My main focus these days is building accessible digital experiences at scale.
           </p>
 
           <p className="text-muted-foreground leading-relaxed">
-            When I&apos;m not at the computer, you can usually find me rock climbing, running, or planning my next trip abroad. I&apos;m always open to hearing about interesting projects and innovative ideas, so feel free to reach out.
+            When I&apos;m not at the computer, you can usually find me watching documentaries, reading about history, running, or planning my next trip. I&apos;m always open to hearing about interesting projects and innovative ideas, so feel free to reach out.
           </p>
 
           {/* Skills */}

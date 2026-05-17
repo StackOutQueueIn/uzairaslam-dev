@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, MailIcon } from './icons';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,17 +9,17 @@ export default function Footer() {
     {
       name: 'GitHub',
       href: 'https://github.com/uzairaslam437',
-      icon: Github,
+      icon: GithubIcon,
     },
     {
       name: 'LinkedIn',
       href: 'https://www.linkedin.com/in/uzairaslam1/',
-      icon: Linkedin,
+      icon: LinkedinIcon,
     },
     {
       name: 'Email',
       href: 'mailto:uzair.aslam@example.com',
-      icon: Mail,
+      icon: MailIcon,
     },
   ];
 

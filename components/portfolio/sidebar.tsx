@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { Github, Linkedin, Twitter, Mail, Menu, X } from 'lucide-react';
+import { GithubIcon, LinkedinIcon, MailIcon, MenuIcon, TwitterIcon, XIcon } from './icons';
 
 const navigationLinks = [
   { name: 'About', href: '#about' },
@@ -15,22 +15,22 @@ const socialLinks = [
   {
     name: 'GitHub',
     href: 'https://github.com/uzairaslam437',
-    icon: Github,
+    icon: GithubIcon,
   },
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/uzairaslam1/',
-    icon: Linkedin,
+    icon: TwitterIcon,
   },
   {
     name: 'Twitter',
     href: 'https://twitter.com',
-    icon: Twitter,
+    icon: LinkedinIcon,
   },
   {
     name: 'Email',
     href: 'mailto:uzair.aslam@example.com',
-    icon: Mail,
+    icon: MailIcon,
   },
 ];
 
@@ -56,7 +56,7 @@ export default function Sidebar() {
         className="fixed top-6 right-6 z-50 lg:hidden p-2 text-accent hover:text-foreground transition-colors"
         aria-label="Toggle menu"
       >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+        {isOpen ? <XIcon className="h-6 w-6" /> : <MenuIcon className="h-6 w-6" />}
       </button>
 
       {/* Sidebar */}

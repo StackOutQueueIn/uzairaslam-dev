@@ -1,26 +1,132 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0e27;
+  --background-secondary: #112240;
+  --background-tertiary: #233554;
+  --foreground: #ccd6f6;
+  --card: #112240;
+  --card-foreground: #ccd6f6;
+  --popover: #112240;
+  --popover-foreground: #ccd6f6;
+  --primary: #64ffda;
+  --primary-foreground: #0a0e27;
+  --secondary: #112240;
+  --secondary-foreground: #ccd6f6;
+  --muted: #233554;
+  --muted-foreground: #8892b0;
+  --accent: #64ffda;
+  --accent-foreground: #0a0e27;
+  --destructive: #ef4444;
+  --destructive-foreground: #fecaca;
+  --border: #233554;
+  --input: #112240;
+  --ring: #64ffda;
+  --chart-1: #64ffda;
+  --chart-2: #1db584;
+  --chart-3: #4facfe;
+  --chart-4: #00f2fe;
+  --chart-5: #43e97b;
+  --radius: 0.5rem;
+  --sidebar: #0a0e27;
+  --sidebar-foreground: #ccd6f6;
+  --sidebar-primary: #64ffda;
+  --sidebar-primary-foreground: #0a0e27;
+  --sidebar-accent: #64ffda;
+  --sidebar-accent-foreground: #0a0e27;
+  --sidebar-border: #233554;
+  --sidebar-ring: #64ffda;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-foreground flex items-center gap-4;
+  }
+
+  .section-title::before {
+    content: '';
+    @apply block w-10 h-px bg-accent;
+  }
+
+  .nav-link {
+    @apply text-muted-foreground hover:text-accent transition-colors relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-px bg-accent transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .experience-dot {
+    @apply absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-background top-0;
+  }
+
+  .project-card {
+    @apply bg-secondary hover:bg-muted border border-border transition-all duration-300;
+  }
+
+  .tech-tag {
+    @apply text-accent text-xs font-mono;
+  }
+
+  .accent-underline {
+    @apply border-b-2 border-accent;
+  }
 }
