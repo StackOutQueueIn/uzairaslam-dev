@@ -52,7 +52,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-6 md:px-12 py-20 md:py-32 max-w-4xl mx-auto">
+    <section id="projects" className="px-6 md:px-12 py-16 md:py-20 max-w-4xl mx-auto">
       <div className="flex gap-6 md:gap-10">
         {/* Section Number */}
         <div className="flex flex-col items-center">
@@ -68,17 +68,12 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div key={`${project.title}-${index}`} className="group">
               {/* Project Link/Title */}
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-baseline gap-2 mb-3 cursor-pointer"
-              >
+              <div className="flex items-baseline gap-2 mb-3">
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>
-                <ExternalLinkIcon className="h-4 w-4 text-text-muted group-hover:text-accent opacity-0 group-hover:opacity-100 transition-all" />
-              </a>
+                {/* <ExternalLinkIcon className="h-4 w-4 text-text-muted group-hover:text-accent opacity-0 group-hover:opacity-100 transition-all" /> */}
+              </div>
 
               {/* Description */}
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
@@ -99,14 +94,14 @@ export default function Projects() {
       </div>
 
       {/* View Full Project Archive */}
-      <div className="text-center mt-16 pt-12 border-t border-border">
+      {/* <div className="text-center mt-16 pt-12 border-t border-border">
         <a
           href="#"
           className="inline-flex items-center gap-2 text-accent hover:text-foreground font-mono text-sm transition-colors"
         >
           View Full Project Archive →
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

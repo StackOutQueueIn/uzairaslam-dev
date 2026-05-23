@@ -1,5 +1,6 @@
 'use client';
 
+import { publicContactEmail } from '@/lib/contact';
 import { GithubIcon, LinkedinIcon, MailIcon } from './icons';
 
 export default function Footer() {
@@ -18,7 +19,7 @@ export default function Footer() {
     },
     {
       name: 'Email',
-      href: 'mailto:uzair.aslam@example.com',
+      href: `mailto:${publicContactEmail}`,
       icon: MailIcon,
     },
   ];

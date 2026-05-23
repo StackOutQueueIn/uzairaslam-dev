@@ -17,10 +17,10 @@ const jobs: Job[] = [
     location: 'Islamabad, Pakistan',
     period: '2025 - Present',
     description:
-      'Contributed to the design, development, and maintenance of production-level web applications using React, Next.js, Node.js, and relational/non-relational databases. Implemented scalable RESTful APIs, optimized backend logic, and improved frontend performance across multiple platforms.',
+      'Contributed to the design, development, and maintenance of production level web applications using React, Next.js, Node.js, and relational/non-relational databases. Implemented scalable RESTful APIs, optimized backend logic, and improved frontend performance across multiple platforms.',
     achievements: [
       'Implemented scalable RESTful APIs and optimized backend logic',
-      'Developed authentication flows and role-based access control systems',
+      'Developed authentication flows and role based access control systems',
       'Integrated third-party services including Stripe, blockchain payments, and logistics APIs',
       'Collaborated with designers, QA, and product teams on agile workflows',
       'Participated in code reviews, sprint planning, and deployment workflows',
@@ -31,7 +31,7 @@ const jobs: Job[] = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="px-6 md:px-12 py-20 md:py-32 max-w-4xl mx-auto">
+    <section id="experience" className="px-6 md:px-12 py-16 md:py-20 max-w-4xl mx-auto">
       <div className="flex gap-6 md:gap-10">
         {/* Section Number */}
         <div className="flex flex-col items-center">
@@ -89,14 +89,14 @@ export default function Experience() {
       </div>
 
       {/* View Full Resume */}
-      <div className="text-center mt-16 pt-12 border-t border-border">
+      {/* <div className="text-center mt-16 pt-12 border-t border-border">
         <a
           href="#"
           className="inline-flex items-center gap-2 text-accent hover:text-foreground font-mono text-sm transition-colors"
         >
           View Full Résumé →
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

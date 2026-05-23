@@ -29,6 +29,16 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Contact Form Setup
+
+The contact form uses a Next.js API route plus SMTP to send emails.
+
+1. Copy [.env.example](.env.example) to `.env.local`.
+2. Set `NEXT_PUBLIC_CONTACT_EMAIL` and `CONTACT_TO_EMAIL` to the inbox you want to receive messages in.
+3. Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER`, and `SMTP_PASS` for your email provider.
+4. Restart the development server after adding or changing the environment variables.
+5. Submit the Contact form to confirm the message arrives in your inbox.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

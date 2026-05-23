@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { publicContactEmail } from '@/lib/contact';
 import { GithubIcon, LinkedinIcon, MailIcon, MenuIcon, TwitterIcon, XIcon } from './icons';
 
 const navigationLinks = [
@@ -20,16 +21,16 @@ const socialLinks = [
   {
     name: 'LinkedIn',
     href: 'https://www.linkedin.com/in/uzairaslam1/',
-    icon: TwitterIcon,
-  },
-  {
-    name: 'Twitter',
-    href: 'https://twitter.com',
     icon: LinkedinIcon,
   },
   {
+    name: 'Twitter',
+    href: 'https://x.com/uzairaslam_437',
+    icon: TwitterIcon,
+  },
+  {
     name: 'Email',
-    href: 'mailto:uzair.aslam@example.com',
+    href: `mailto:${publicContactEmail}`,
     icon: MailIcon,
   },
 ];
