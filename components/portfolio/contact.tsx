@@ -2,7 +2,7 @@
 
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { publicContactEmail } from '@/lib/contact';
-import { GithubIcon, LinkedinIcon, MailIcon } from './icons';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const initialFormState = {
   name: '',
@@ -175,7 +175,7 @@ export default function Contact() {
                 href={`mailto:${publicContactEmail}`}
                 className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
               >
-                <MailIcon className="h-5 w-5 text-accent" />
+                <Mail className="h-5 w-5 text-accent" />
                 <span className="font-mono text-sm">{publicContactEmail}</span>
               </a>
               <a
@@ -184,7 +184,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
               >
-                <LinkedinIcon className="h-5 w-5 text-accent" />
+                <Linkedin className="h-5 w-5 text-accent" />
                 <span className="font-mono text-sm">LinkedIn</span>
               </a>
               <a
@@ -193,7 +193,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-foreground hover:text-accent transition-colors group"
               >
-                <GithubIcon className="h-5 w-5 text-accent" />
+                <Github className="h-5 w-5 text-accent" />
                 <span className="font-mono text-sm">GitHub</span>
               </a>
             </div>

@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
-import { publicContactEmail } from '@/lib/contact';
 
 export const runtime = 'nodejs';
 
@@ -37,7 +36,7 @@ export async function POST(request: Request) {
   const smtpPort = process.env.SMTP_PORT;
   const smtpUser = process.env.SMTP_USER;
   const smtpPass = process.env.SMTP_PASS;
-  const recipientEmail = process.env.CONTACT_TO_EMAIL ?? publicContactEmail;
+  const recipientEmail = process.env.CONTACT_TO_EMAIL;
 
   if (!smtpHost || !smtpPort || !smtpUser || !smtpPass || !recipientEmail) {
     return NextResponse.json(
@@ -60,7 +59,7 @@ export async function POST(request: Request) {
   });
 
   await transporter.sendMail({
-    from: process.env.CONTACT_FROM_EMAIL ?? smtpUser,
+    from: `${name} via Portfolio <${smtpUser}>`,
     to: recipientEmail,
     replyTo: email,
     subject: `Portfolio contact: ${subject}`,

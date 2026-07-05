@@ -1,6 +1,6 @@
 'use client';
 
-import { ExternalLinkIcon } from './icons';
+import { ExternalLink } from 'lucide-react';
 
 interface Project {
   title: string;
@@ -72,7 +72,7 @@ export default function Projects() {
                 <h3 className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">
                   {project.title}
                 </h3>
-                {/* <ExternalLinkIcon className="h-4 w-4 text-text-muted group-hover:text-accent opacity-0 group-hover:opacity-100 transition-all" /> */}
+                {/* <ExternalLink className="h-4 w-4 text-text-muted group-hover:text-accent opacity-0 group-hover:opacity-100 transition-all" /> */}
               </div>
 
               {/* Description */}

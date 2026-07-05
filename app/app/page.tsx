@@ -1,4 +1,3 @@
-import Sidebar from '@/components/portfolio/sidebar'
 import Hero from '@/components/portfolio/hero'
 import About from '@/components/portfolio/about'
 import Experience from '@/components/portfolio/experience'
@@ -9,11 +8,8 @@ import Footer from '@/components/portfolio/footer'
 export default function Home() {
   return (
     <div className="flex bg-background min-h-screen">
-      {/* Sidebar Navigation */}
-      <Sidebar />
-
       {/* Main Content */}
-      <main className="flex-1 w-full lg:ml-64">
+      <main className="flex-1 w-full">
         <Hero />
         <About />
         <Experience />
