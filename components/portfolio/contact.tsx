@@ -86,7 +86,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 name="name"
-                placeholder="John Doe"
+                placeholder="Peter Smith"
                 value={formData.name}
                 onChange={handleChange}
                 autoComplete="name"
